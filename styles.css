@@ -1,6 +1,11 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
   margin: 0;
-  background: black;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #e6e8ea;
 
   display: flex;
   justify-content: center;
@@ -9,34 +14,33 @@ body {
 }
 .digital_clock {
   color: #fff;
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
-  border: 1px solid rgb(248, 245, 245);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.875rem;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  animation: rotateGradient 6s linear infinite; /* Longer duration */
+  font-size: 4.5rem;
+  box-shadow: 0px 0px 10px #4f709c;
+  animation: rotateGradient 6s linear infinite;
 }
 
 @keyframes rotateGradient {
   0% {
-    background: linear-gradient(0deg, #a54848, #010306);
+    background: linear-gradient(0deg, #09080b, #4477ce);
   }
   25% {
-    background: linear-gradient(90deg, #a54848, #010306);
+    background: linear-gradient(90deg, #09080b, #4477ce);
   }
   50% {
-    background: linear-gradient(180deg, #a54848, #010306);
+    background: linear-gradient(180deg, #09080b, #4477ce);
   }
   75% {
-    background: linear-gradient(270deg, #a54848, #010306);
+    background: linear-gradient(270deg, #09080b, #4477ce);
   }
   100% {
-    background: linear-gradient(360deg, #a54848, #010306);
+    background: linear-gradient(360deg, #09080b, #4477ce);
   }
 }
 #formatHours {
@@ -44,23 +48,27 @@ body {
 
   border: none;
   background: none;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   cursor: pointer;
   margin-top: 20px;
-  text-decoration: underline;
 }
 button:focus {
   outline: none;
 }
 
-@media screen and (max-width: 340px) {
-  body {
-    background-color: #6470c6;
+@media screen and (max-width: 516px) {
+  .digital_clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    font-size: 3rem;
   }
+}
+@media screen and (max-width: 207px) {
   .digital_clock {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: linear-gradient(357deg, #a54848, #010306);
+    font-size: 1rem;
   }
 }
