@@ -28,7 +28,7 @@ function updateClock() {
 document.getElementById('formatHours').addEventListener('click', function () {
     is24hour = !is24hour;
 
-    this.textContent = is24hour ? 'Click her for 24 Hours' : 'Click her for 12 Hours'
+    this.textContent = is24hour ? 'Click her for 12 Hours' : 'Click her for 24 Hours'
 
     updateClock();
 })
